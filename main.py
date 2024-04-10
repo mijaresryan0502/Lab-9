@@ -8,13 +8,13 @@ def Decode(input):
   return [new_pass, input]
 
 def encoder(password):
-  list = []
+  new_pass = ''
   for number in password:
     if int(number)+3 >= 7:
-      list.append(int(number)-7)
+      new_pass += (int(number) - 7)
     else:
-      list.append(int(number)+3)
-  return list
+      new_pass += (int(number) + 3)
+  return new_pass
 
 def menu():
   print("Menu")
@@ -28,10 +28,11 @@ def main():
     menu()
     option = int(input("Please enter an option: "))
     if option == 1:
-      encoder(option)
+      input = input("Please enter your password to encode: ")
+      encoder(input)
       print("Your password has been encoded and stored!")
     elif option == 2:
-      value = decode(option)
+      value = Decode(option)
       print(f"The encoded password is {value[1]}, and the original password is {value[0]}")
     elif option == 3:
       break
