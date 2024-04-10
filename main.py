@@ -1,3 +1,4 @@
+#Logan Philips
 def Decode(input):
   new_pass = ''
   for number in input:
