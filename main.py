@@ -11,10 +11,10 @@ def Decode(input):
 def encoder(password):
   new_pass = ''
   for number in password:
-    if int(number)+3 >= 7:
-      new_pass += str((int(number) - 7))
+    if int(number) >= 7:
+      new_pass += str((int(number)-7))
     else:
-      new_pass += str((int(number) + 3))
+      new_pass += str((int(number)+3))
   return new_pass
 
 def menu():
